@@ -15,7 +15,7 @@ button {
   
 }
 
-h1 {
+#psearch {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -34,4 +34,22 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);  
     opacity: 0.6;
+}
+
+#wrapper {
+    background-color: #014034;
+    width: 1020px;
+    height: 780px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 1px;
+}
+
+#Search {
+    position: absolute;
+    background-color: violet;
+    left: 5%;
+    height: 500;
 }
