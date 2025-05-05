@@ -1,0 +1,37 @@
+input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100x;
+	height: 25px;
+}
+
+button {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+input::placeholder {
+    color: gray;
+    font-style: italic;
+    opacity: 0.7;
+  }
+
+img {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    opacity: 0.6;
+}
