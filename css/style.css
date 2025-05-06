@@ -35,21 +35,77 @@ img {
     transform: translate(-50%, -50%);  
     opacity: 0.6;
 }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* optional, for contrast */
+}
 
 #wrapper {
     background-color: #014034;
-    width: 1020px;
-    height: 780px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-top: 1px;
+    width: 101%;
+    height: 101%;
+    position: absolute;
 }
 
 #Search {
     position: absolute;
     background-color: violet;
-    left: 5%;
-    height: 500;
+    left: 2.5%;
+    top: 2.5%;
+    height: 95%;
+    width: 25%; /* example width */
+    border-radius: 2.5%;
+}
+
+#fun_fact {
+    position: absolute;
+    background-color: rgb(252, 252, 252);
+    left: 8%;
+    top: 50%;
+    height: 40%;
+    width: 84%; /* example width */
+    border-radius: 2.5%;
+}
+
+#janej{
+    position: absolute;
+    background-color: chocolate;
+    left: 30%;
+    top: 2.5%;
+    height: 25%;
+    width: 35%;
+    border-radius: 2.5%;
+}
+#konskvens {
+    position: absolute;
+    background-color: aqua;
+    left: 30%;
+    top: 30%;
+    height: 67.5%;
+    width: 35%;
+    border-radius: 2.5%;
+}
+
+#similar {
+    position: absolute;
+    background-color: lightgreen;
+    left: 67.5%;
+    top: 2.5%;
+    height: 65%;
+    width: 30%;
+    border-radius: 2.5%;
+}
+#source {
+    position: absolute;
+    background-color: lightcoral;
+    left: 67.5%;
+    top: 70%;
+    height: 27.5%;
+    width: 30%;
+    border-radius: 2.5%;
+
 }
