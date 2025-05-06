@@ -127,3 +127,12 @@ body {
     border-radius: 2.5%;
 
 }
+
+#resultContainer {
+    color: red; 
+    position: absolute; 
+    top: 60%;   
+    left: 50%;  
+    transform: translate(-50%, -50%);   
+    font-size: 20px;
+}
