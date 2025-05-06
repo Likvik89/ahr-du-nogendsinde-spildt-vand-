@@ -117,6 +117,7 @@ body {
     width: 30%;
     border-radius: 2.5%;
 }
+
 #source {
     position: absolute;
     background-color: lightcoral;
@@ -135,4 +136,15 @@ body {
     left: 50%;  
     transform: translate(-50%, -50%);   
     font-size: 20px;
+}
+
+h1 {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+}
+
+#fun_tekst {
+    font-size: medium;
+    text-align: center;
 }
