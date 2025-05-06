@@ -87,6 +87,7 @@ searchButton.addEventListener('click', function () {
     if (foundItem) {
         window.location.href = foundItem.link;
     } else {
-        resultContainer.textContent = 'Item not found. Please try again.';
+        resultContainer.textContent = 'Det ord kender vi ikke, prøv igen.'; // Display a message if not found
+        searchInput.value = ''; // Clear the input field
     }
 });
