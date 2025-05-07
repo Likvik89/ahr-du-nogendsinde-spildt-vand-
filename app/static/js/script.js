@@ -78,6 +78,32 @@ const itemsDatabase = [
     { name: 'Æble' }
 ];
 
+
+// Example script.js
+function updateTxt(newTxt) {
+    fetch('/update_txt', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ new_txt: newTxt })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message) {
+            console.log(data.message);
+        } else {
+            console.error(data.error);
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Example usage
+//updateTxt("Dette er en ny tekst!");
+
+
+
 // Get references to the suggestions container
 const suggestionsContainer = document.createElement('div');
 suggestionsContainer.id = 'suggestionsContainer';
@@ -139,7 +165,7 @@ document.addEventListener('click', function (e) {
 function showResult(item) {
     if (item.link) {
         window.location.href = '/page/'; // Redirect to the item's link
-
+        updateTxt(item.name); // Update the text in the database
     } else {
         resultContainer.textContent = 'Det ord kender vi ikke, prøv igen.';
     }
@@ -153,6 +179,7 @@ searchButton.addEventListener('click', function () {
     // Redirect to the HTML page if found
     if (foundItem) {
         window.location.href =  '/page/' ;
+        updateTxt(foundItem.name); // Update the text in the database
     } else {
         resultContainer.textContent = 'Det ord kender vi ikke, prøv igen.'; // Display a message if not found
         searchInput.value = ''; // Clear the input field
@@ -166,3 +193,4 @@ document.addEventListener('keydown', function (e) {
         searchInput.value = ''; // Clear the input field
     }
 });
+
