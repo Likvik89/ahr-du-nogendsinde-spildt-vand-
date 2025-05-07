@@ -13,7 +13,7 @@ def home():
 @app.route('/page/')
 def page():
     txt = "Har du nogen sinde spildt vand?"
-    return render_template('template.html', title=txt)
+    return render_template('template.html', item=txt)
 
 if __name__ == '__main__':
     app.debug = True

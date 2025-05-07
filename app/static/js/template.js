@@ -5,6 +5,9 @@ const funfacts = [
 
 var random = Math.floor(Math.random()*(funfacts.length))
 
+var item
+
 window.onload = function(){
     document.getElementById("fun_tekst").textContent = funfacts[random].fact;
+    item = document.getElementById("item").textContent
 };

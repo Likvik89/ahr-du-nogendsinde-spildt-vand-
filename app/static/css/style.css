@@ -148,3 +148,7 @@ h1 {
     font-size: medium;
     text-align: center;
 }
+
+a {
+    z-index: -1;
+}
