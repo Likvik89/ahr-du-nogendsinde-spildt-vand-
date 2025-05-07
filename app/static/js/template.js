@@ -1,6 +1,9 @@
 const funfacts = [
-    {nr: 1, fact: 'bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla'},
-    {nr: 2, fact: 'bla bla bla'}
+    {nr: 1, fact: 'hvis du skulle putte en grand piano i et toilet skulle toilettet ca. 30 gange større'},
+    {nr: 2, fact: 'der kan være volumen af 166 golfbolde i en toilet skål'},
+    {nr: 3, fact: 'der er mere end 2000 forskellige toiletter i verden'},
+    {nr: 4, fact: 'hvis du tager alle molekyler vand i et toilet skøl og lægger dem i en række, vil de strække 7.2 lys år'},
+    {nr: 5, fact: 'kommunen siger du har spildt vand'},
 ];
 
 const searched = [
