@@ -150,11 +150,21 @@ function find__item() {
         if (!found.janej) {
             // Show the red box and hide the green box
             redBox.style.display = "block";
+            redBox.style.width = "25%";
+            redBox.style.height = "10%";
+            redBox.style.top = "15%";
+            redBox.style.left = "47.5%";
+            redBox.style.textAlign = "center";
             redBox.textContent = "Dette må ikke skylles ud!";
             greenBox.style.display = "none";
         } else {
             // Show the green box and hide the red box
             greenBox.style.display = "block";
+            greenBox.style.width = "25%";
+            greenBox.style.height = "10%";
+            greenBox.style.top = "15%";
+            greenBox.style.left = "47.5%";
+            greenBox.style.textAlign = "center";
             greenBox.textContent = "Dette må skylles ud!";
             redBox.style.display = "none";
         }
@@ -167,22 +177,5 @@ function find__item() {
     }
 }
 
-// CSS for #redBox
-const style = document.createElement('style');
-style.textContent = `
-    #redBox {
-        display: none;
-        background-color: red;
-        color: white;
-        width: 100%;
-        height: 100px;
-        text-align: center;
-        line-height: 100px;
-        font-size: 24px;
-        border: 2px solid darkred;
-        border-radius: 10px;
-        margin-top: 20px;
-    }
-`;
-document.head.appendChild(style);
+
 

@@ -200,20 +200,14 @@ h6 {
     text-align: center;
 }
 
-#ja {
-    top: 50%;
-    left: 15%;
-    position: absolute;
-    width: 60%;
-    height: 25%;
-}
+
 #redBox, #greenBox {
     display: none;
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 20%; /* Adjusted width */
+    width: 2%; /* Adjusted width */
     height: 40px; /* Adjusted height */
     text-align: center;
     line-height: 40px;
