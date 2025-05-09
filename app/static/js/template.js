@@ -7,19 +7,96 @@ const funfacts = [
 ];
 
 const searched = [
-    {name: "apple", janej: 'apple', konskvens: 'apple', similar: 'apple', source: 'apple'},
-    {name: "banana", janej: 'banana', konskvens: 'banana', similar: 'banana', source: 'banana'},
-    {name: "carrot", janej: 'carrot', konskvens: 'carrot', similar: 'carrot', source: 'carrot'},
-];
+    {
+      name: "Vådserviet",
+      janej: "Ja",
+      konskvens: "Kan tilstoppe kloaksystemet og forurene havmiljøet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Hår",
+      janej: "Nej",
+      konskvens: "Kan tilstoppe kloaksystemet og forurene havmiljøet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Tampon",
+      janej: "Nej",
+      konskvens: "Kan tilstoppe kloaksystemet og forurene havmiljøet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Toiletpapir",
+      janej: "Ja",
+      konskvens: "Kan tilstoppe kloaksystemet og forurene havmiljøet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Neglelak",
+      janej: "Nej",
+      konskvens: "Kan forurene grundvandet og skade dyrelivet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "P-piller",
+      janej: "Nej",
+      konskvens: "Kan forurene grundvandet og skade dyrelivet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Klorin",
+      janej: "Nej",
+      konskvens: "Kan forurene grundvandet og skade dyrelivet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Fritureolie",
+      janej: "Nej",
+      konskvens: "Kan forurene grundvandet og skade dyrelivet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Batterier",
+      janej: "Nej",
+      konskvens: "Kan forurene grundvandet og skade dyrelivet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Maling",
+      janej: "Nej",
+      konskvens: "Kan forurene grundvandet og skade dyrelivet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Cigaretskod",
+      janej: "Nej",
+      konskvens: "Kan forurene grundvandet og skade dyrelivet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    },
+    {
+      name: "Plastikposer",
+      janej: "Nej",
+      konskvens: "Kan forurene grundvandet og skade dyrelivet",
+      similar: "Toiletpapir (som må skylles ud)",
+      source: "https://mst.dk"
+    }
+  ];
+  
 
 
 var item
-/*
-window.onload = function(){
-    document.getElementById("fun_tekst").textContent = funfacts[random].fact;
-    item = document.getElementById("item").textContent
-};
-*/
+
 
 function find__item() {
     item = document.getElementById("item").textContent.trim().toLowerCase();
@@ -38,7 +115,6 @@ function find__item() {
     }
 }
 var random = Math.floor(Math.random() * (funfacts.length));
-//var item = "banana"; // This should be dynamically set based on user input or selection
 
 window.onload = function() {
     document.getElementById("fun_tekst").textContent = funfacts[random].fact;
@@ -48,6 +124,4 @@ window.onload = function() {
 
     // Find the object in the searched array where the name matches the item
     
-
-
 };
