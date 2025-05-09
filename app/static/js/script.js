@@ -53,6 +53,7 @@ suggestionsContainer.style.position = 'absolute';
 suggestionsContainer.style.backgroundColor = '#fff';
 suggestionsContainer.style.border = '1px solid #ccc';
 suggestionsContainer.style.display = 'none';
+suggestionsContainer.style.zIndex = '1000';
 document.body.appendChild(suggestionsContainer);
 
 // Position the suggestions container below the input field
