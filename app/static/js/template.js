@@ -9,89 +9,90 @@ const funfacts = [
 const searched = [
     {
       name: "Vådserviet",
-      janej: "Ja",
+      janej: false,
       konskvens: "Kan tilstoppe kloaksystemet og forurene havmiljøet",
       similar: "Toiletpapir (som må skylles ud)",
       source: "https://mst.dk"
     },
     {
       name: "Hår",
-      janej: "Nej",
+      janej: false,
       konskvens: "Kan tilstoppe kloaksystemet og forurene havmiljøet",
       similar: "Toiletpapir (som må skylles ud)",
       source: "https://mst.dk"
     },
     {
       name: "Tampon",
-      janej: "Nej",
+      janej: false,
       konskvens: "Kan tilstoppe kloaksystemet og forurene havmiljøet",
       similar: "Toiletpapir (som må skylles ud)",
       source: "https://mst.dk"
     },
     {
       name: "Toiletpapir",
-      janej: "Ja",
-      konskvens: "Kan tilstoppe kloaksystemet og forurene havmiljøet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: true,
+      konskvens: "Opløses hurtigt og er beregnet til toilettet",
+      similar: "Intet – toiletpapir er det eneste der må skylles ud",
       source: "https://mst.dk"
     },
     {
       name: "Neglelak",
-      janej: "Nej",
-      konskvens: "Kan forurene grundvandet og skade dyrelivet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: false,
+      konskvens: "Indeholder opløsningsmidler, som kan skade miljøet",
+      similar: "Neglelakfjerner, makeuprester",
       source: "https://mst.dk"
     },
     {
       name: "P-piller",
-      janej: "Nej",
-      konskvens: "Kan forurene grundvandet og skade dyrelivet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: false,
+      konskvens: "Medicinrester påvirker vandmiljøet og dyrelivet",
+      similar: "Tabletter, vitaminpiller",
       source: "https://mst.dk"
     },
     {
       name: "Klorin",
-      janej: "Nej",
-      konskvens: "Kan forurene grundvandet og skade dyrelivet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: false,
+      konskvens: "Er ætsende og skadeligt for vandmiljøet",
+      similar: "Rodrens, toiletrens",
       source: "https://mst.dk"
     },
     {
       name: "Fritureolie",
-      janej: "Nej",
-      konskvens: "Kan forurene grundvandet og skade dyrelivet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: false,
+      konskvens: "Kan stoppe afløb til og tiltrække rotter",
+      similar: "Madolie, smørrester",
       source: "https://mst.dk"
     },
     {
       name: "Batterier",
-      janej: "Nej",
-      konskvens: "Kan forurene grundvandet og skade dyrelivet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: false,
+      konskvens: "Indeholder tungmetaller som kan forurene naturen",
+      similar: "Elektronik, pærer",
       source: "https://mst.dk"
     },
     {
       name: "Maling",
-      janej: "Nej",
-      konskvens: "Kan forurene grundvandet og skade dyrelivet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: false,
+      konskvens: "Indeholder kemikalier og skal afleveres som farligt affald",
+      similar: "Lakker, spraymaling",
       source: "https://mst.dk"
     },
     {
       name: "Cigaretskod",
-      janej: "Nej",
-      konskvens: "Kan forurene grundvandet og skade dyrelivet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: false,
+      konskvens: "Filteret indeholder plastik og giftige stoffer",
+      similar: "Snus, tyggegummi",
       source: "https://mst.dk"
     },
     {
       name: "Plastikposer",
-      janej: "Nej",
-      konskvens: "Kan forurene grundvandet og skade dyrelivet",
-      similar: "Toiletpapir (som må skylles ud)",
+      janej: false,
+      konskvens: "Nedbrydes ikke i naturen og skader dyrelivet",
+      similar: "Slikpapir, plastikemballage",
       source: "https://mst.dk"
     }
   ];
+  
   
 
 
@@ -106,10 +107,13 @@ function find__item() {
     console.log("Found object:", found);
 
     if (found) {
-        document.getElementById("janej").textContent = found.janej;
-        document.getElementById("konskvens").textContent = found.konskvens;
-        document.getElementById("similar").textContent = found.similar;
-        document.getElementById("source").textContent = found.source;
+        //document.getElementById("janejt").textContent = found.janej;
+        if (found.janej) {
+            document.getElementById("ja").visibility = "hidden";
+        }
+        document.getElementById("konskvenst").textContent = found.konskvens;
+        document.getElementById("similart").textContent = found.similar;
+        document.getElementById("sourcet").textContent = found.source;
     } else {
         console.error("Item not found in the searched array");
     }

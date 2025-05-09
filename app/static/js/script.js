@@ -136,3 +136,53 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+function find__item() {
+    item = document.getElementById("item").textContent.trim().toLowerCase();
+    console.log("Item value:", item);
+
+    const found = searched.find(obj => obj.name.toLowerCase() === item);
+    console.log("Found object:", found);
+
+    if (found) {
+        const redBox = document.getElementById("redBox");
+        const greenBox = document.getElementById("greenBox");
+
+        if (!found.janej) {
+            // Show the red box and hide the green box
+            redBox.style.display = "block";
+            redBox.textContent = "Dette må ikke skylles ud!";
+            greenBox.style.display = "none";
+        } else {
+            // Show the green box and hide the red box
+            greenBox.style.display = "block";
+            greenBox.textContent = "Dette må skylles ud!";
+            redBox.style.display = "none";
+        }
+
+        document.getElementById("konskvenst").textContent = found.konskvens;
+        document.getElementById("similart").textContent = found.similar;
+        document.getElementById("sourcet").textContent = found.source;
+    } else {
+        console.error("Item not found in the searched array");
+    }
+}
+
+// CSS for #redBox
+const style = document.createElement('style');
+style.textContent = `
+    #redBox {
+        display: none;
+        background-color: red;
+        color: white;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 24px;
+        border: 2px solid darkred;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+`;
+document.head.appendChild(style);
+
