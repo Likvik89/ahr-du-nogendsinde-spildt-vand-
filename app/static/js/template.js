@@ -12,23 +12,22 @@ const searched = [
     {name: "carrot", janej: 'carrot', konskvens: 'carrot', similar: 'carrot', source: 'carrot'},
 ];
 
-var item
 
+var item
+/*
 window.onload = function(){
     document.getElementById("fun_tekst").textContent = funfacts[random].fact;
     item = document.getElementById("item").textContent
 };
+*/
 
-var random = Math.floor(Math.random() * (funfacts.length));
-var item = "banana"; // This should be dynamically set based on user input or selection
+function find__item() {
+    item = document.getElementById("item").textContent.trim().toLowerCase();
+    console.log("Item value:", item);
 
-window.onload = function() {
-    document.getElementById("fun_tekst").textContent = funfacts[random].fact;
+    const found = searched.find(obj => obj.name.toLowerCase() === item);
+    console.log("Found object:", found);
 
-    // Find the object in the searched array where the name matches the item
-    const found = searched.find(obj => obj.name === item);
-
-    // If found, update the text content with the janej value
     if (found) {
         document.getElementById("janej").textContent = found.janej;
         document.getElementById("konskvens").textContent = found.konskvens;
@@ -37,4 +36,18 @@ window.onload = function() {
     } else {
         console.error("Item not found in the searched array");
     }
+}
+var random = Math.floor(Math.random() * (funfacts.length));
+//var item = "banana"; // This should be dynamically set based on user input or selection
+
+window.onload = function() {
+    document.getElementById("fun_tekst").textContent = funfacts[random].fact;
+     // Get the item from the HTML element
+    
+    setTimeout(find__item, 100); 
+
+    // Find the object in the searched array where the name matches the item
+    
+
+
 };
