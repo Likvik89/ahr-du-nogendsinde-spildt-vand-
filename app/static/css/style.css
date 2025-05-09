@@ -152,3 +152,21 @@ h1 {
 a {
     z-index: -3;
 }
+
+#search2 {
+    position: absolute;
+    left: 23%;
+    top : 30%;
+}
+
+#input2 {
+    position: absolute;
+    top: 40%;
+}
+
+#searched_item {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    font-size: 50px;
+}
